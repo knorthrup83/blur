@@ -36,7 +36,6 @@ class Image
       puts x.join()
     end
   end
-
 end
 
 image = Image.new([
