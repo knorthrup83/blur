@@ -46,3 +46,39 @@ image = Image.new([
 ])
 
 image.output_image
+
+
+# If cell=1
+#Going to the left
+  # While distance > 0
+  # If ! CanIMove
+    # break
+  # Distance -= 1
+  # Call ModifyColumn(direction (i.e. up), distance)
+  # Call ModifyColumn(direction (i.e. down), distance)
+#Going to the right
+  # While distance > 0
+  # If ! CanIMove
+    # break
+  # Distance -= 1
+  # Call ModifyColumn(direction (i.e. up), distance)
+  # Call ModifyColumn(direction (i.e. down), distance)
+
+
+
+
+# Iterate through cells until a 1 is detected
+# ModifyColumn(direction): While distance > 0, 
+    # if ! CanIMove(x,y)
+      #break
+      # Move direction 1 unit
+      # Subtract 1 from distance
+      # Modify column up and down (distance, directionUp/Dn)
+        # Loop "distance" num of times
+          # Move "direction" and change value (if possible)
+    
+
+# Method: CanIMove (x,y)
+  # Check (lines 13-30)
+    # return boolean
+  # Move if possible
