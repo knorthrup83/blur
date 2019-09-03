@@ -4,7 +4,6 @@ class Image
   end
 
   def output_image(manhattan)
-    #create a variable with a new memory address for each cell
     @new_array = Marshal.load(Marshal.dump(@image))
     @image.each_with_index do |row, row_index|
       row.each_with_index do |cell, col_index|
@@ -17,7 +16,6 @@ class Image
       puts x.join()
     end
   end
-
 
   def blur(distance, col_index, row_index)
     original_col_index = col_index
@@ -47,8 +45,6 @@ class Image
         col_index += 1
       end
   end
-
-
 
   def modify_column(distance, col_index, row_index)
       original_row_index = row_index
@@ -81,8 +77,6 @@ class Image
       end
   end
 
-
-
   def can_I_move(col_index, row_index, direction)
       if direction == "left"
         if col_index != 0
@@ -104,8 +98,6 @@ class Image
           return false
       end
   end
-
-
 end
 
 image = Image.new([
