@@ -41,14 +41,14 @@ class Image
           break
         end
         move_distance -= 1
-        modify_column(move_distance, col_index, row_index)
         col_index += 1
+        modify_column(move_distance, col_index, row_index)
       end
   end
 
   def modify_column(distance, col_index, row_index)
       original_row_index = row_index
-  #HORIZONTAL
+  #ORIGIN
       @new_array[row_index][col_index] = 1
   #UP
       move_distance = distance
@@ -101,15 +101,15 @@ class Image
 end
 
 image = Image.new([
-  [0, 0, 0, 0, 1, 0, 0, 0, 0],
   [0, 0, 0, 0, 0, 0, 0, 0, 0],
   [0, 0, 0, 0, 0, 0, 0, 0, 0],
   [0, 0, 0, 0, 0, 0, 0, 0, 0],
-  [1, 0, 0, 0, 0, 0, 0, 0, 1],
+  [0, 0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 1, 0, 0],
   [0, 0, 0, 0, 0, 0, 0, 0, 0],
   [0, 0, 0, 0, 0, 0, 0, 0, 0],
   [0, 0, 0, 0, 0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 1, 0, 0, 0, 0]
+  [0, 0, 0, 0, 0, 0, 0, 0, 0]
 ])
-puts image
+
 image.output_image(2)
