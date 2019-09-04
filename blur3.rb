@@ -33,7 +33,7 @@ class Image
         modify_column(move_distance, col_index, row_index)
       end 
     #RESET
-      col_index += original_col_index
+      col_index = original_col_index
     #RIGHT
       move_distance = distance
       while move_distance > 0
@@ -101,15 +101,15 @@ class Image
 end
 
 image = Image.new([
+  [0, 0, 0, 0, 1, 0, 0, 0, 0],
   [0, 0, 0, 0, 0, 0, 0, 0, 0],
   [0, 0, 0, 0, 0, 0, 0, 0, 0],
   [0, 0, 0, 0, 0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0, 0, 1, 0, 0],
-  [0, 0, 0, 0, 0, 0, 0, 0, 0],
+  [1, 0, 0, 0, 1, 0, 0, 0, 1],
   [0, 0, 0, 0, 0, 0, 0, 0, 0],
   [0, 0, 0, 0, 0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0, 0, 0, 0, 0]
+  [0, 0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 1, 0, 0, 0, 0]
 ])
 
 image.output_image(2)
